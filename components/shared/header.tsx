@@ -1,12 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
-
 import { Container } from './container';
 import { Button } from '../ui/button';
-import { ArrowRight, ShoppingCart } from 'lucide-react';
+import {ArrowRight, CircleUser, ShoppingCart} from 'lucide-react';
 import { SearchInput } from './search-input';
 import { cn } from '@/lib/utils';
 import { CartDrawer } from './cart-drawer';
+import Link from "next/link";
+import {Title} from "@/components/shared/title";
 
 interface Props {
   className?: string;
@@ -17,10 +18,16 @@ export const Header: React.FC<Props> = ({ className }) => {
     <header className={cn('border-b border-gray-100', className)}>
       <Container className="flex items-center justify-between py-8">
         <div className="flex items-center gap-4">
-          <Image src="/logo.png" width={35} height={35} alt="Logo" />
+
+          <Link href="/">
+            <Image src="/logo.png" width={35} height={35} alt="Logo"/>
+          </Link>
+
           <div>
-            <h1 className="text-2xl uppercase font-black">Next Pizza</h1>
-            <p className="text-sm text-gray-400 leading-3">вкусней уже некуда</p>
+            <Link className="text-2xl uppercase font-black" href="/">
+              <Title text="GAME RECORDS" size="sm" />
+            </Link>
+            <p className="text-sm text-gray-400 leading-3">рекорды ставки турниры гонки игры</p>
           </div>
         </div>
 
@@ -29,7 +36,17 @@ export const Header: React.FC<Props> = ({ className }) => {
         </div>
 
         <div className="flex items-center gap-3">
-          <Button variant="outline">Войти</Button>
+
+          <Link className="row-start-3 flex gap-6 flex-wrap items-center justify-center" href="/page">
+          <Button variant="default">
+          PAGE
+
+          </Button>
+          </Link>
+          <Button variant="outline" className="flex items-center gap-2">
+            <CircleUser size={18} />
+            Войти
+          </Button>
 
           <CartDrawer>
             <Button className="group relative">
