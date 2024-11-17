@@ -1,51 +1,28 @@
-
+import { Categories } from '@/components/shared/categories';
 import { Container } from '@/components/shared/container';
-import { Header } from '@/components/shared/header';
+import { Filters } from '@/components/shared/filters';
 
-// import { Title } from '@/components/shared/title';
-import {TopBar} from "@/components/shared/top-bar";
-import {Filters} from "@/components/shared/filters";
-import {ProductsGroupList} from "@/components/shared/products-group-list";
-import {Pagination} from "@/components/shared/pagination";
-// import {Categories} from "@/components/shared/categories";
-// import {SortPopup} from "@/components/shared/sort-popup";
+import { Header } from '@/components/shared/header';
+import { Pagination } from '@/components/shared/pagination';
+import { ProductsGroupList } from '@/components/shared/products-group-list';
+import { SortPopup } from '@/components/shared/sort-popup';
+import { Title } from '@/components/shared/title';
 
 export default function Home() {
     return (
         <main className="min-h-screen bg-white rounded-3xl">
-            <Header/>
-            {/*<Container className="mt-5">*/}
-            {/*    <Title text="Все игры" size="lg" className="font-extrabold"/>*/}
-            {/*</Container>*/}
+            <Header />
 
-            {/*<div className="sticky top-0 bg-white py-5 shadow-lg shadow-black/5">*/}
-            {/*    <Container className="flex items-center justify-between ">*/}
-            {/*        <Categories />*/}
-            {/*        <SortPopup />*/}
-            {/*    </Container>*/}
-            {/*</div>*/}
-
-            <TopBar/>
-
-            <Container className="pb-14">
-                <div className="flex gap-[60px]">
-                    <div className="w-[250px]">
-                        <Filters/>
-                    </div>
-                    <div className="flex-1">
-                        <div className="flex flex-col gap-16">
-                            <ProductsGroupList title="Пиццы" items={[1, 2, 3, 4, 5]} />
-                            <ProductsGroupList title="Комбо" items={[1, 2, 3, 4, 5]} />
-                        </div>
-
-                        <div className="flex items-center gap-6 mt-12">
-                            <Pagination pageCount={3} />
-                            <span className="text-sm text-gray-400">5 из 65</span>
-                        </div>
-                    </div>
-                </div>
+            <Container className="mt-5">
+                <Title text="Все пиццы" size="lg" className="font-extrabold" />
             </Container>
 
+            <div className="sticky top-0 bg-white py-5 shadow-lg shadow-black/5">
+                <Container className="flex items-center justify-between ">
+                    <Categories />
+                    <SortPopup />
+                </Container>
+            </div>
 
             {/*<Container className="grid grid-cols-6 gap-2 my-10">*/}
             {/*    <img*/}
@@ -85,7 +62,25 @@ export default function Home() {
             {/*        src="https://cdn.inappstory.ru/story/quw/acz/zf5/zu37vankpngyccqvgzbohj1/custom_cover/logo-350x440.webp?k=IgAAAAAAAAAE&v=1336215020"*/}
             {/*    />*/}
             {/*</Container>*/}
-            <div style={{height: '1000px'}}/>
+
+            <Container className="pb-14">
+                <div className="flex gap-[60px]">
+                    <div className="w-[250px]">
+                        <Filters />
+                    </div>
+                    <div className="flex-1">
+                        {/*<div className="flex flex-col gap-16">*/}
+                        {/*    <ProductsGroupList title="Пиццы" items={[1, 2, 3, 4, 5]} />*/}
+                        {/*    <ProductsGroupList title="Комбо" items={[1, 2, 3, 4, 5]} />*/}
+                        {/*</div>*/}
+
+                        <div className="flex items-center gap-6 mt-12">
+                            <Pagination pageCount={3} />
+                            <span className="text-sm text-gray-400">5 из 65</span>
+                        </div>
+                    </div>
+                </div>
+            </Container>
         </main>
     );
 }

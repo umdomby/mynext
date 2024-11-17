@@ -1,0 +1,29 @@
+### GET request to example server
+GET {{host}}/api/users-bd
+
+###
+POST {{host}}/api/users-bd
+Content-Type: application/json
+
+{
+  "fullName": "Vasya3 Pupkin3",
+  "email": "VasyaPupkin3@email.com",
+  "password": "123123"
+}
+
+### Authorization by token, part 1. Retrieve and save token.
+POST https://examples.http-client.intellij.net/body-echo
+Content-Type: application/json
+
+{
+  "token": "my-secret-token"
+}
+
+> {% client.global.set("auth_token", response.body.token); %}
+
+### Authorization by token, part 2. Use token to authorize.
+GET https://examples.http-client.intellij.net/headers
+Authorization: Bearer {{auth_token}}
+
+### Also, check documentation for automatic OAuth2
+GET https://www.jetbrains.com/help/idea/oauth-2-0-authorization.html
