@@ -1,0 +1,13 @@
+### GET request to example server
+GET {{host}}/api/products/search
+
+### GET request to example server
+GET {{host}}/api/products/search?query=сыр
+
+###
+POST {{host}}/api/products/search
+Content-Type: application/json
+
+{
+  
+}
