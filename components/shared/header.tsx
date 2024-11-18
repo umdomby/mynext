@@ -37,9 +37,9 @@ export const Header: React.FC<Props> = ({ className }) => {
 
         <div className="flex items-center gap-3">
 
-          <Link className="row-start-3 flex gap-6 flex-wrap items-center justify-center" href="/nfs">
+          <Link className="row-start-3 flex gap-6 flex-wrap items-center justify-center" href="/device">
           <Button variant="default">
-          NFS
+          DEVICE
 
           </Button>
           </Link>

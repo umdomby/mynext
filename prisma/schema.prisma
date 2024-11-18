@@ -28,6 +28,16 @@ model User {
   updatedAt DateTime @updatedAt
 }
 
+model Device {
+  id          Int    @id @default(autoincrement())
+  username    String
+  name        String
+  description String
+  timestate   String
+  linkvideo   String
+  img         String
+}
+
 model Category {
   id       Int       @id @default(autoincrement())
   name     String    @unique
