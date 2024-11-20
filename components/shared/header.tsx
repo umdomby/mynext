@@ -27,7 +27,9 @@ export const Header: React.FC<Props> = ({ className }) => {
             <Link className="text-2xl uppercase font-black" href="/">
               <Title text="GAME RECORDS" size="sm" />
             </Link>
-            <p className="text-sm text-gray-400 leading-3">рекорды ставки турниры гонки игры</p>
+              <Link className="text-xs text-gray-600 leading-3" href="/">
+            <p>рекорды ставки турниры гонки игры</p>
+            </Link>
           </div>
         </div>
 
@@ -37,9 +39,9 @@ export const Header: React.FC<Props> = ({ className }) => {
 
         <div className="flex items-center gap-3">
 
-          <Link className="row-start-3 flex gap-6 flex-wrap items-center justify-center" href="/device">
+          <Link className="row-start-3 flex gap-6 flex-wrap items-center justify-center" href="/game-records">
           <Button variant="default">
-          DEVICE
+          RECORDS
 
           </Button>
           </Link>

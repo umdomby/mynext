@@ -1,6 +1,6 @@
 'use client';
 
-import {Device} from '@prisma/client';
+import {GameRecords} from '@prisma/client';
 import React, {useEffect} from 'react';
 import {Api} from "@/shared/services/api-client";
 
@@ -14,14 +14,14 @@ import {
     TableRow,
 } from "@/components/ui/table"
 
-export const Devices: React.FC = () => {
+export const GameRecord: React.FC = () => {
 
-    const [device, setDevice] = React.useState<Device[]>([]);
+    const [device, setDevice] = React.useState<GameRecords[]>([]);
 
     useEffect (()  => {
         try {
             async function fetchData() {
-                const response = await Api.device.getAll()
+                const response = await Api.gameRecords.getAll()
                 setDevice(response);
             }
             fetchData();
@@ -50,7 +50,7 @@ export const Devices: React.FC = () => {
                     <TableRow key={device.id}>
                         <TableCell className="font-medium">{device.name}</TableCell>
                         <TableCell>{device.description}</TableCell>
-                        <TableCell>{device.username}</TableCell>
+                        {/*<TableCell>{device.username}</TableCell>*/}
                         <TableCell className="text-right">{device.timestate.substring(3)}</TableCell>
                     </TableRow>
                 ))}

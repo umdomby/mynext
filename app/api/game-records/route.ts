@@ -3,6 +3,6 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   // SELECT * FROM users WHERE email = 'emasd'
-  const devices = await prisma.device.findMany();
-  return NextResponse.json(devices);
+  const gameRecords = await prisma.gameRecords.findMany();
+  return NextResponse.json(gameRecords);
 }

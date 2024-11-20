@@ -1,0 +1,3 @@
+### devices
+GET {{host}}/api/game-records/
+Content-Type: application/json

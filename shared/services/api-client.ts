@@ -3,7 +3,7 @@ import * as ingredients from './ingredients';
 import * as cart from './cart';
 import * as auth from './auth';
 import * as stories from './stories';
-import * as device from './device';
+import * as gameRecords from './game-records';
 
 export const Api = {
   products,
@@ -11,5 +11,5 @@ export const Api = {
   cart,
   auth,
   stories,
-  device,
+  gameRecords,
 };
