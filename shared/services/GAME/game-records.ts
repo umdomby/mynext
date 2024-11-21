@@ -1,5 +1,5 @@
-import { axiosInstance } from './instance';
-import { ApiRoutes } from './constants';
+import { axiosInstance } from '../instance';
+import { ApiRoutes } from '../constants';
 import { GameRecords } from '@prisma/client';
 
 export const getAll = async (): Promise<GameRecords[]> => {

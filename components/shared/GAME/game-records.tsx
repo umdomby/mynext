@@ -16,13 +16,13 @@ import {
 
 export const GameRecord: React.FC = () => {
 
-    const [device, setDevice] = React.useState<GameRecords[]>([]);
+    const [gameRecords, setGameRecords] = React.useState<GameRecords[]>([]);
 
     useEffect (()  => {
         try {
             async function fetchData() {
                 const response = await Api.gameRecords.getAll()
-                setDevice(response);
+                setGameRecords(response);
             }
             fetchData();
         } catch (error) {
@@ -35,7 +35,7 @@ export const GameRecord: React.FC = () => {
 
         <div>
             <Table>
-                <TableCaption>Need For Speed records</TableCaption>
+                <TableCaption>Need For Speed Records</TableCaption>
                 <TableHeader>
                     <TableRow>
                         <TableHead className="w-[400px]">GAME</TableHead>
@@ -46,12 +46,12 @@ export const GameRecord: React.FC = () => {
                 </TableHeader>
                 <TableBody>
 
-                {device.map((device) => (
-                    <TableRow key={device.id}>
-                        <TableCell className="font-medium">{device.name}</TableCell>
-                        <TableCell>{device.description}</TableCell>
-                        {/*<TableCell>{device.username}</TableCell>*/}
-                        <TableCell className="text-right">{device.timestate.substring(3)}</TableCell>
+                {gameRecords.map((gameRecords) => (
+                    <TableRow key={gameRecords.id}>
+                        <TableCell className="font-medium">{gameRecords.name}</TableCell>
+                        <TableCell>{gameRecords.description}</TableCell>
+                        <TableCell>{gameRecords.userId}</TableCell>
+                        <TableCell className="text-right">{gameRecords.timestate.substring(3)}</TableCell>
                     </TableRow>
                 ))}
                 </TableBody>

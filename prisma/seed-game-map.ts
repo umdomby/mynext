@@ -201,28 +201,28 @@ async function up() {
     },
     {
         "id": 29,
-        "gamenameId": "NFS Most Wanted 2005 5 laps",
+        "gamenameId": 5,
         "description": "Ironwood Estates",
         "createdAt": "2024-09-03T23:22:15.424Z",
         "updatedAt": "2024-09-03T23:22:15.424Z"
     },
     {
         "id": 30,
-        "gamenameId": "NFS SHIFT",
+        "gamenameId": 2,
         "description": "Dacota Tri-Oval",
         "createdAt": "2024-09-06T01:56:22.935Z",
         "updatedAt": "2024-09-06T01:56:22.935Z"
     },
     {
         "id": 31,
-        "gamenameId": "NFS UNDERGROUND",
+        "gamenameId": 3,
         "description": "Olympic Square",
         "createdAt": "2024-09-06T23:00:00.985Z",
         "updatedAt": "2024-09-06T23:00:00.985Z"
     },
     {
         "id": 32,
-        "gamenameId": "NFS UNDERGROUND 2 NO NITRO",
+        "gamenameId": 7,
         "description": "Freemont UP",
         "createdAt": "2024-09-07T23:04:28.516Z",
         "updatedAt": "2024-09-07T23:04:28.516Z"
