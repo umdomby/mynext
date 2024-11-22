@@ -6,6 +6,8 @@ import {PizzaImage} from "@/components/shared/pizza-image";
 export default async function ProductPage({ params: { name } }: { params: { name: string } }) {
   const product = await prisma.product.findFirst({where: {name: decodeURI(name)}});
 
+
+
   if (!product) {
     return notFound();
   }
