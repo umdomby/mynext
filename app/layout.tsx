@@ -1,5 +1,5 @@
-import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
+
 import './globals.css';
 
 const nunito = Nunito({
@@ -8,11 +8,6 @@ const nunito = Nunito({
     weight: ['400', '500', '600', '700', '800', '900'],
 });
 
-export const metadata: Metadata = {
-    title: 'GAME RECORDS',
-    description: 'рекорды турниры гонки игры пари',
-};
-
 export default function RootLayout({
                                        children,
                                    }: Readonly<{
@@ -20,8 +15,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-        <body className={nunito.variable}>
-        <div>{children}</div>
+        <head>
+            <link data-rh="true" rel="icon" href="/logo.png" />
+        </head>
+        <body className={nunito.className}>
+        {children}
         </body>
         </html>
     );

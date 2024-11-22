@@ -24,12 +24,13 @@ export const GameRecord: React.FC = () => {
                 const response = await Api.gameRecords.getAll()
                 setGameRecords(response);
             }
+
             fetchData();
+
         } catch (error) {
             console.log(error);
         }
     }, []);
-
 
     return (
 

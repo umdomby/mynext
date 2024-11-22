@@ -7,8 +7,8 @@ export default function Home() {
       <div>
 
           <main className="min-h-screen bg-white rounded-3xl">
-              <Header/>
-              <Link className="row-start-3 flex gap-6 flex-wrap items-center justify-center" href="/">
+              {/*<Header/>*/}
+              <Link className="row-start-3 flex gap-6 flex-wrap items-center justify-center" href="/public">
                   <Button variant="default">
                       HOME
                   </Button>

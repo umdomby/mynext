@@ -7,7 +7,6 @@ import {Api} from "@/shared/services/api-client";
 import {
     Table,
     TableBody,
-    TableCaption,
     TableCell,
     TableHead,
     TableHeader,
@@ -35,13 +34,9 @@ export const GameNames: React.FC = () => {
 
         <div>
             <Table>
-                {/*<TableCaption>GAME</TableCaption>*/}
                 <TableHeader>
                     <TableRow>
                         <TableHead className="w-[400px]">GAME</TableHead>
-                        {/*<TableHead>Map</TableHead>*/}
-                        {/*<TableHead >User</TableHead>*/}
-                        {/*<TableHead className="text-right">Time</TableHead>*/}
                     </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -49,9 +44,6 @@ export const GameNames: React.FC = () => {
                 {gameName.map((gameName) => (
                     <TableRow key={gameName.id}>
                         <TableCell className="font-medium">{gameName.name}</TableCell>
-                        {/*<TableCell>{gameName.description}</TableCell>*/}
-                        {/*<TableCell>{gameName.userId}</TableCell>*/}
-                        {/*<TableCell className="text-right">{gameName.timestate.substring(3)}</TableCell>*/}
                     </TableRow>
                 ))}
                 </TableBody>
